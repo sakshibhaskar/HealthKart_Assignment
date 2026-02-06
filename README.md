@@ -1,165 +1,107 @@
-# HealthKart_Assignment
-📊 HealthKart Product Review Sentiment Analysis
-📌 Project Overview
+🏥 HealthKart Product Review Analysis 📊
+📌 Overview
 
-This project analyzes customer product reviews to understand user sentiment, brand perception, and product affinity. The goal is to extract meaningful insights from unstructured review text and use them to build a simple recommendation logic.
+This project analyzes customer product reviews to understand user sentiment and brand perception.
+The goal is to extract meaningful insights from unstructured review text and build a simple recommendation logic based on customer feedback.
 
-The project is designed with a clear, explainable, and beginner-friendly approach, focusing on business understanding rather than complex black-box models.
+The solution focuses on clarity, explainability, and practical thinking, rather than complex black-box models.
 
-🗂 Dataset
+🗂️ Dataset
 
-Source: Provided by HealthKart (assessment dataset)
+📄 File: GrammarandProductReviews.csv
 
-Format: CSV file
+The dataset contains:
 
-Key columns used:
+📝 Customer review text
 
-reviews.text → Customer review text
+📦 Product name
 
-reviews.rating → User rating
+🏷️ Brand name
 
-brand → Brand name
+🗃️ Product category
 
-name → Product name
+⭐ User rating
 
-categories → Product category
+🔍 What This Project Does
 
-🔍 Problem Breakdown
+🧹 Cleans raw review text
 
-This project addresses the following tasks:
+😊 Classifies reviews into Positive, Negative, or Neutral
 
-Understanding and cleaning unstructured text data
+🏢 Analyzes sentiment at brand level
 
-Performing sentiment analysis on customer reviews
+📦 Analyzes sentiment at product level
 
-Analyzing brand and product-level sentiment trends
+📊 Visualizes key sentiment trends
 
-Inferring customer preference and dissatisfaction
+⭐ Creates a simple sentiment-based recommendation logic
 
-Building a simple recommendation logic based on sentiment
+🛠️ Tools Used
 
-Visualizing insights for easy interpretation
+🐍 Python
 
-🛠 Tools & Technologies
+📊 Pandas
 
-Python
+📈 Matplotlib
 
-Pandas (data handling)
+📓 Jupyter Notebook (Google Colab)
 
-Matplotlib (visualization)
+🧠 Approach
 
-Google Colab (execution environment)
+📥 Load and explore the dataset
 
-No pretrained sentiment models were used to keep the logic transparent and original.
+🧹 Clean review text to remove noise
 
-🧹 Text Preprocessing
+😊 Apply a rule-based sentiment logic using positive and negative keywords
 
-Customer reviews contain noise such as punctuation, symbols, and inconsistent casing.
-To handle this:
+🏷️ Group and analyze results by brand and product
 
-Converted text to lowercase
+📊 Visualize insights using simple charts
 
-Removed special characters
+⭐ Recommend brands with higher positive sentiment
 
-Removed extra spaces
+This approach keeps the logic transparent and easy to explain.
 
-This ensured cleaner input for sentiment analysis.
+▶️ How to Run the Project
 
-😊 Sentiment Analysis Approach
+📁 Clone the repository
 
-Instead of using a pretrained model, a custom rule-based sentiment approach was implemented.
+git clone <your-github-repo-link>
 
-Defined a small set of positive and negative words
 
-Counted occurrences of these words in each review
+📓 Open HealthKart_Review_Analysis.ipynb
 
-Classified sentiment as:
+📤 Upload GrammarandProductReviews.csv
 
-Positive
+▶️ Run all cells sequentially
 
-Negative
+🐳 Docker Support
 
-Neutral
+A basic Docker setup is included to ensure reproducible execution.
 
-This approach is:
+docker build -t healthkart-review-analysis .
+docker run -p 8888:8888 healthkart-review-analysis
 
-Easy to understand
+📊 Results
 
-Easy to explain
+📈 Overall customer sentiment distribution
 
-Suitable for beginner-level analysis
+🏆 Brands with strong positive feedback
 
-Less prone to plagiarism concerns
+⚠️ Brands with repeated negative feedback
 
-📊 Data Analysis & Insights
-
-The following insights were derived:
-
-Overall sentiment distribution of customer reviews
-
-Brand-wise positive and negative sentiment trends
-
-Product-level sentiment patterns
-
-Identification of brands with high customer satisfaction
-
-Detection of brands with frequent negative feedback
-
-Visualizations were used to make trends easily interpretable for business use.
-
-⭐ Recommendation Logic
-
-A simple recommendation system was designed using sentiment distribution:
-
-Brands/products with more positive than negative reviews were marked as recommended
-
-This logic can be extended in future using ratings, categories, or advanced models
-
-📈 Visualizations
-
-The project includes:
-
-Overall sentiment bar chart
-
-Top brands with positive reviews
-
-Brands with highest negative feedback
-
-Top products with positive sentiment
-
-These visuals help convert raw data into actionable insights.
-
-🚀 How to Run the Project
-
-Open the notebook in Google Colab
-
-Upload the dataset file:
-
-GrammarandProductReviews.csv
-
-
-Run the cells sequentially from top to bottom
-
-Review generated outputs and visualizations
+⭐ Simple sentiment-based recommendations
 
 🔮 Future Improvements
 
-Use advanced NLP models (TF-IDF, Logistic Regression, BERT)
+🤖 Improve sentiment accuracy using machine learning
 
-Incorporate star ratings into sentiment scoring
+⭐ Combine ratings with sentiment scores
 
-Improve sentiment vocabulary
+🗂️ Category-based recommendations
 
-Build category-specific recommendations
+📊 Build a lightweight dashboard
 
-Deploy as a simple web dashboard
+📝 Final Note
 
-🧠 Key Learnings
-
-Handling unstructured text data
-
-Translating raw reviews into business insights
-
-Importance of explainable logic
-
-Building end-to-end analytical pipelines
+This project demonstrates an end-to-end analytical workflow, from raw data to actionable insights, with a focus on simplicity and real-world understanding.
